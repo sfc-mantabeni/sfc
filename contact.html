@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact - Mantabeni SFC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+
+<img src="logo.png" class="logo">
+
+<h1>Mantabeni SFC Church</h1>
+
+<p>"Ngemusa Wakhe Siyaphila"</p>
+
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="ministries.html">Ministries</a>
+<a href="contact.html">Contact</a>
+</nav>
+<center>
+<div class="container">
+
+<h2>Contact Us</h2>
+
+<p>Email: mantabenisfc@gmail.com</p>
+<p>Phone: +268 798 60496</p>
+<p>Location: Mantabeni, Eswatini</p>
+
+</div>
+<section class="container">
+
+<h2>Contact / Prayer Request</h2>
+
+<form onsubmit="sendToWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email">
+
+<textarea id="message" placeholder="Your Message or Prayer Request"></textarea>
+
+<button type="submit">Send to WhatsApp</button>
+
+</form>
+
+</section>
+<section class="social-media">
+
+<h2>Connect With Us</h2>
+
+<div class="social-icons">
+
+<a href="https://wa.me/26879860496" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="https://www.facebook.com/" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="https://www.instagram.com/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.tiktok.com/" target="_blank">
+<i class="fab fa-tiktok"></i>
+</a>
+
+</div>
+
+</section></center>
+
+<footer>
+<p>© 2026 Mantabeni SFC Church</p>
+</footer>
+<script>
+
+function sendToWhatsApp(){
+
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var message = document.getElementById("message").value;
+
+var phoneNumber = "26879860496"; 
+
+var url = "https://wa.me/" + phoneNumber + "?text="
++ "Name: " + name + "%0a"
++ "Email: " + email + "%0a"
++ "Message: " + message;
+
+window.open(url, '_blank').focus();
+
+}
+
+</script>
+</body>
+</html>
